@@ -3,18 +3,25 @@ import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import NavBar from "./NavBar";
 
 const name = "Favian Silva";
 export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ];
   return (
-    <div className="max-w-xl py-0 px-4 mt-12 mx-auto mb-6">
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Favian Silva's personal development website"
         />
         <meta
           property="og:image"
@@ -25,49 +32,20 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="flex flex-col content-center">
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+      <div className="relative min-h-screen lg:flex">
+        <NavBar title="faviansilva.dev" links={navLinks} />
+        <div className="flex-1 min-h-screen bg-gray-100 p-6 flex flex-col sm:py-12 md:ml-72">
+          <header></header>
+          <main>{children}</main>
+          {!home && (
+            <div className="mt-12">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>← Back to home</a>
               </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className="mt-12">
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
