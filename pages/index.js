@@ -4,7 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Date from "../components/date";
 import NavBar from "../components/NavBar";
-import Card from "./Card";
+import Card from "./card";
 
 export default function Home({ allPostsData }) {
   const projects = [
