@@ -4,16 +4,17 @@ import "tailwindcss/tailwind.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import NavBar from "./NavBar";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const name = "Favian Silva";
 export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    // { href: "/", label: "Home" },
+    // { href: "/about", label: "About" },
+    // { href: "/blog", label: "Blog" },
+    // { href: "/contact", label: "Contact" },
   ];
   return (
     <>
@@ -32,10 +33,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="relative min-h-screen lg:flex">
+      <div className="relative min-h-screen md:flex ">
         <NavBar title="faviansilva.dev" links={navLinks} />
-        <div className="flex-1 min-h-screen bg-gray-100 p-6 flex flex-col sm:py-12 md:ml-72">
-          <header></header>
+        <div className="flex-1 min-h-screen bg-gray-300 p-6 flex flex-col sm:py-12 md:ml-72">
           <main>{children}</main>
           {!home && (
             <div className="mt-12">
