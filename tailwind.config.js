@@ -9,6 +9,7 @@ module.exports = {
       gridTemplateColumns: {
         "fill-16": "repeat(auto-fit, minmax(256px, 1fr))",
       },
+
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
@@ -20,5 +21,16 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const extendUnderline = {
+        ".underline": {
+          textDecoration: "underline",
+          "text-decoration-color": colors.blue["500"],
+          "text-decoration-thickness": "5px",
+        },
+      };
+      addUtilities(extendUnderline);
+    },
+  ],
 };

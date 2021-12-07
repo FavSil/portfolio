@@ -5,6 +5,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import NavBar from "../components/NavBar";
 import Card from "./card";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Home({ allPostsData }) {
   const projects = [
@@ -15,7 +16,8 @@ export default function Home({ allPostsData }) {
       description:
         "Hide.io is an online multiplayer hide and seek game. It uses socket.io to connect with players around the world.",
       src: "/images/hideio.gif",
-      link: "",
+      link: "https://hideio.herokuapp.com/#/",
+      active: true,
       technologies: ["React", "Node.js", "Express", "MongoDB"],
     },
     {
@@ -23,9 +25,10 @@ export default function Home({ allPostsData }) {
       title: "MediTrack",
       header: "iOS Medical tracking app",
       description:
-        "MediTrack is a medication reminder and analytics app for iOS. It was developed to help remind and track medicine usage for those who have to take their medicine daily.",
+        "MediTrack is a medication reminder and analytics app for iOS. It was developed to help remind and track medicine usage for those who have to take their medicine daily. App is deprecated from the App store and is no longer maintained.",
       src: "/images/medi-small.png",
       link: "",
+      active: false,
       technologies: ["React-Native", "AWS", "MongoDB"],
     },
     {
@@ -36,6 +39,7 @@ export default function Home({ allPostsData }) {
         "Hough transformation and selective colour bit maps were used to locate lanes on the automobile camera. A histogram of the lanes was made and averaged across multiple frames to find the direction of the lane curvature. A graphic was made and emplaced over the histogram points to give the use some visual reference.",
       src: "/images/calgary_output.gif",
       link: "",
+      active: false,
       technologies: ["C++", "OpenCV"],
     },
   ];
@@ -78,6 +82,12 @@ export default function Home({ allPostsData }) {
         styling and I took inspiration from the websites I used to visit in the
         simple and cheesy websites I used to visit in the 2000s.
       </p>
+      <hr className="mt-8 border-black/30 m-auto" />
+      <h2 className="mt-6 text-blue-600 text-2xl font-bold">Contact</h2>
+      <div className="pt-2 flex items-center space-x-1 animate-bounce text-gray-800">
+        <MdOutlineEmail className="h-4 w-4 " />
+        <p>s.favian@gmail.com</p>
+      </div>
     </Layout>
   );
 }
