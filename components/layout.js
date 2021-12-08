@@ -7,7 +7,7 @@ import NavBar from "./nav";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const name = "Favian Silva";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Favian Silva Portfolio";
 
 export default function Layout({ children, home }) {
   const navLinks = [
@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Favian Silva's personal development website"
+          content="Favian Silva's personal development portfolio"
         />
         <meta
           property="og:image"
