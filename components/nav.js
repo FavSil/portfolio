@@ -5,12 +5,12 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 export default function NavBar(props) {
   return (
     <>
-      <div class="bg-gray-400 text-gray-100 flex justify-between md:hidden">
-        <a href="#" class="block p-4 text-blue-600 font-bold">
+      <div class="bg-gray-400 text-gray-100 flex  justify-between md:hidden">
+        <a href="#" class="block p-4 text-blue-600 font-bold ">
           {props.title}
         </a>
 
-        <button class="mobile-menu-button p-4 focus:outline-none focus:bg-blue-800">
+        <button class="mobile-menu-button p-4 rounded-lg focus:outline-none focus:bg-blue-600">
           <svg
             class="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,7 @@ import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import NavBar from "./NavBar";
+import NavBar from "./nav";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const name = "Favian Silva";
