@@ -10,7 +10,7 @@ export default function NavBar(props) {
           {props.title}
         </a>
 
-        <button class="mobile-menu-button p-4 rounded-lg focus:outline-none focus:bg-blue-600">
+        {/* <button class="mobile-menu-button p-4 rounded-lg focus:outline-none focus:bg-blue-600">
           <svg
             class="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export default function NavBar(props) {
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-        </button>
+        </button> */}
       </div>
 
       <div class="sidebar flex flex-col text-right content-end bg-gray-400 text-gray-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full  md:fixed md:translate-x-0 transition duration-200 ease-in-out md:w-72">
