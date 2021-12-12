@@ -3,20 +3,29 @@ import { AiOutlineLink } from "react-icons/ai";
 export default function Card({ project }) {
   return (
     <div className="flex flex-col p-4 bg-white rounded-md hover:shadow-lg ">
-      <a href={project.link} className="visited:text-purple-600">
-        {project.active ? (
-          <h2 className="text-lg font-bold underline">{project.title}</h2>
-        ) : (
-          <h2 className="text-lg font-bold">{project.title}</h2>
-        )}
-      </a>
-      <div className="flex-1 mt-2 flex flex-col gap-1">
+      {project.active ? (
         <a href={project.link}>
+          <h2 className="text-lg font-bold underline decoration-orange-500 decoration-2 hover:bg-orange-400 hover:text-white hover:no-underline hover:rounded hover:px-1">
+            {project.title}
+          </h2>
+        </a>
+      ) : (
+        <h2 className="text-lg font-bold">{project.title}</h2>
+      )}
+      <div className="flex-1 mt-2 flex flex-col gap-1">
+        {project.active ? (
+          <a href={project.link}>
+            <img
+              className="object-cover h-40 w-full rounded-md "
+              src={project.src}
+            />
+          </a>
+        ) : (
           <img
-            className="object-cover h-36 w-full rounded-md"
+            className="object-cover h-40 w-full rounded-md "
             src={project.src}
           />
-        </a>
+        )}
         <h3 className="mt-2 text-xs font-bold leading-right">
           {project.header}
         </h3>

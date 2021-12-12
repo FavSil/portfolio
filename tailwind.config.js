@@ -13,24 +13,10 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
-      colors: {
-        gray: colors.trueGray,
-      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    function ({ addUtilities }) {
-      const extendUnderline = {
-        ".underline": {
-          textDecoration: "underline",
-          "text-decoration-color": colors.blue["500"],
-          "text-decoration-thickness": "5px",
-        },
-      };
-      addUtilities(extendUnderline);
-    },
-  ],
+  plugins: [],
 };

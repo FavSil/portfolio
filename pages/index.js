@@ -80,13 +80,14 @@ export default function Home({ allPostsData }) {
         <span className="text-blue-500 font-bold ">React</span> using the{" "}
         <span className="font-bold">NextJS</span> framework. I used{" "}
         <span className="font-bold text-green-500">Tailwindcss</span> for the
-        styling.
+        styling (
         <a
           className="text-blue-600 animate-pulse "
           href="https://github.com/FavSil/portfolio"
         >
           source
         </a>
+        ).
       </p>
       <hr className="mt-8 border-black/30 m-auto" />
       <h2 className="mt-6 text-blue-600 text-2xl font-bold">Contact</h2>
