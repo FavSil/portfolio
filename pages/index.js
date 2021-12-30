@@ -14,7 +14,11 @@ export default function Home({ allPostsData }) {
             title: 'Hide.io',
             header: 'Multiplayer Sockect.io game',
             description:
+<<<<<<< HEAD
                 'Hide.io is a simple, stylized online multiplayer hide and seek game. Players take turns searching for each other in a modern re-imagining of the classic childhood game. This version of Hide.io uses socket.io to handle the in-game communication and React for the UI and Javascript Canvas for the game graphics.',
+=======
+                'Hide.io is a simple, stylized online multiplayer hide and seek game. Players are pitted against each other in a modern re-imagining of the classic childhood game. This version of Hide.io uses socket.io to handle the in game commuincation along with React for the UI and Javascript Canvas for the game graphics.',
+>>>>>>> 7412771bd3afc49176231f4cea4eb821c3f12c4f
             src: '/images/hideio.gif',
             link: 'https://hideio.herokuapp.com/#/',
             active: true,
@@ -25,7 +29,11 @@ export default function Home({ allPostsData }) {
             title: 'MediTrack',
             header: 'iOS Medical tracking app',
             description:
+<<<<<<< HEAD
                 'MediTrack is a medication reminder and analytics app for iOS, developed to help remind and track medicine usage through the use of daily reminders, set timers and custom calendar components. I used a publisher/subscriber model for the reminders backend architecture. This app is deprecated from the App Store and is no longer maintained.',
+=======
+                'MediTrack is a medication reminder and analytics app for iOS. It was developed to help remind and track medicine usage for those who have to take their medicine daily. App is deprecated from the App store and is no longer maintained.',
+>>>>>>> 7412771bd3afc49176231f4cea4eb821c3f12c4f
             src: '/images/medi-small.png',
             link: '',
             active: false,
@@ -36,7 +44,11 @@ export default function Home({ allPostsData }) {
             title: 'Lane Detection',
             header: 'OpenCV Lane Detection',
             description:
+<<<<<<< HEAD
                 'A lane detection program to detect lane drift and lane curvature in real-time. This program used Hough transformation, and selective colour bit maps to locate lanes on the automobile camera. A histogram of the lane markings was detected and averaged across multiple frames to find the direction of the lane curvature. A graphic was made and placed over the video stream to give the user some visual reference.',
+=======
+                'Hough transformation and selective colour bit maps were used to locate lanes on the automobile camera. A histogram of the lanes was made and averaged across multiple frames to find the direction of the lane curvature. A graphic was made and emplaced over the histogram points to give the use some visual reference.',
+>>>>>>> 7412771bd3afc49176231f4cea4eb821c3f12c4f
             src: '/images/calgary_output.gif',
             link: '',
             active: false,
